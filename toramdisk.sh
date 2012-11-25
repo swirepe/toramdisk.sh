@@ -51,9 +51,6 @@ else
 fi
 
 
-
-
-
 # make the root
 if [ ! -d "$RAMDISK_ROOT" ]
 then
@@ -68,7 +65,7 @@ sudo mkdir -p "$RAMDISK_ROOT/$NAME"
 sudo mount -t tmpfs -o size="$SIZE" tmpfs "$RAMDISK_ROOT/$NAME"
 
 # copy the files
-cp -r "$DIRECTORY_TO_COPY" "$RAMDISK_ROOT/$NAME"
+cp -r "$DIRECTORY_TO_COPY" "$RAMDISK_ROOT"
 
 
 echo "$RAMDISK_ROOT/$NAME"
