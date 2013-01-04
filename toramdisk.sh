@@ -47,7 +47,7 @@ if [ -n "$3" ]
 then
     SIZE="$3"
 else
-    SIZE=$(du -c -h $DIRECTORY_TO_COPY | cut -f 1 | tail -n 1)
+    SIZE=$(du -s -B1 $DIRECTORY_TO_COPY | cut -f 1 )
 fi
 
 
